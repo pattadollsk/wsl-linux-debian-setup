@@ -185,3 +185,19 @@ Solution
 # brew install python-tk@<python-version>
 brew install python-tk@3.11
 ```
+
+# Install pipx
+- Ref: https://github.com/pypa/pipx?tab=readme-ov-file#install-pipx
+
+```zsh
+brew install pipx
+pipx ensurepath
+```
+
+# Install Poetry with pipx
+- Ref: https://python-poetry.org/docs/
+
+```zsh
+# install poetry with python set in pyenv
+pipx install "poetry" --python "$(which python)"
+```
