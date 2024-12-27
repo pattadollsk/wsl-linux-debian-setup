@@ -1,7 +1,7 @@
 # WSL Linux Debian Setup
 A guide to using Windows Subsystem for Linux (WSL) to setup Debian distribution GNU/Linux environment
 ## Motivation
-Having  used macOS  which is based on the Unix operating system for my work, while using Windows as my personal laptop. I want to set up a working environment as close to the Unix operating system as possible. So I created a setup guide to the Linux environment by leveraging WSL.
+Having  used macOS  which is based on the Unix operating system for my work, while using Windows on my personal laptop. I want to set up a working environment as close to the Unix operating system as possible. So I created a setup guide to the Linux environment by leveraging WSL.
 # Getting Started
 ```zsh
 sudo apt update && sudo apt upgrade
@@ -81,7 +81,7 @@ sudo apt-get install build-essential procps curl file git
 ```
 ## Next steps:
 - Run these two commands in your terminal to add Homebrew to your PATH:
-    (echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> /home/pattadollsk/.zshrc
+    (echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> /home/<username>/.zshrc
     eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 - Install Homebrew's dependencies if you have sudo access:
     sudo apt-get install build-essential
@@ -143,12 +143,12 @@ brew install colima
 ### Troubleshooting with Colima
 
 ```
-> "[hostagent] failed to exit SSH master" error="failed to execute `ssh -O exit -p 36245 127.0.0.1`, out=\"Control socket connect(/home/pattadol/.config/colima/_lima/colima/ssh.sock): No such file or directory\\r\\n\": exit status 255"
+> "[hostagent] failed to exit SSH master" error="failed to execute `ssh -O exit -p 36245 127.0.0.1`, out=\"Control socket connect(/home/<username>/.config/colima/_lima/colima/ssh.sock): No such file or directory\\r\\n\": exit status 255"
 > [hostagent] Shutting down QEMU with ACPI
 > [hostagent] Failed to remove SSH binding for port 36245
-> "[hostagent] failed to open the QMP socket \"/home/pattadol/.config/colima/_lima/colima/qmp.sock\", forcibly killing QEMU" error="dial unix /home/pattadol/.config/colima/_lima/colima/qmp.sock: connect: connection refused"
+> "[hostagent] failed to open the QMP socket \"/home/<username>/.config/colima/_lima/colima/qmp.sock\", forcibly killing QEMU" error="dial unix /home/<username>/.config/colima/_lima/colima/qmp.sock: connect: connection refused"
 > [hostagent] QEMU has already exited
-> exiting, status={Running:false Degraded:false Exiting:true Errors:[] SSHLocalPort:0} (hint: see "/home/pattadol/.config/colima/_lima/colima/ha.stderr.log")
+> exiting, status={Running:false Degraded:false Exiting:true Errors:[] SSHLocalPort:0} (hint: see "/home/<username>/.config/colima/_lima/colima/ha.stderr.log")
 ```
 
 Try running command:
@@ -174,7 +174,7 @@ echo 'eval "$(pyenv init -)"' >> ~/.zshrc
 ```zsh
 Traceback (most recent call last):
   File "<string>", line 1, in <module>
-  File "/home/pattadol/.pyenv/versions/3.11.11/lib/python3.11/tkinter/__init__.py", line 38, in <module>
+  File "/home/<username>/.pyenv/versions/3.11.11/lib/python3.11/tkinter/__init__.py", line 38, in <module>
     import _tkinter # If this fails your Python may not be configured for Tk
     ^^^^^^^^^^^^^^^
 ModuleNotFoundError: No module named '_tkinter'
