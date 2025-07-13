@@ -16,6 +16,15 @@ prompt adam1            # see Zsh Prompt Theme below
 # Use vi keybindings even if our EDITOR is set to vi
 bindkey -e
 
+# ZLE (Zsh Line Editor) key bindings for Ctrl+Arrow word movement
+# These match the standard Xterm-style sequences when confirmed with cat -v
+
+# Ctrl+Right Arrow (forward-word)
+bindkey '^[[1;5C' forward-word
+
+# Ctrl+Left Arrow (backward-word)
+bindkey '^[[1;5D' backward-word
+
 setopt histignorealldups sharehistory
 
 # Keep 1000000 lines of history within the shell and save it to ~/.zsh_history:
